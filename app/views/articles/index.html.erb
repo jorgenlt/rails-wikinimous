@@ -1,0 +1,14 @@
+
+<div class="container">
+  <% @articles.each do |article| %>
+    <%= link_to article_path(article) do %>
+      <div class="card-product m-4">
+        <img src="https://source.unsplash.com/random/300x300"/>
+        <div class="card-product-infos">
+          <h2><%= article.title %></h2>
+          <p id="article-content"><%= article.content %></p>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>

@@ -11,7 +11,6 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-
   <body>
     <header>
       <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
@@ -26,13 +25,9 @@
               </li>
             </ul>
           </div>
-
-
-
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto">
               <%# if user_signed_in? %>
@@ -41,31 +36,12 @@
                   <i class="fa-solid fa-plus"></i><span> New Article</span>
                   <% end %>
                 </li>
-                <!--
-                <li class="nav-item">
-                  <%= link_to "Messages", "#", class: "nav-link" %>
-                </li>
-                -->
-                <!--
-                <li class="nav-item dropdown">
-                  <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-                  <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    <%= link_to "Action", "#", class: "dropdown-item" %>
-                    <%= link_to "Another action", "#", class: "dropdown-item" %>
-                    <%= link_to "Log out", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
-                  </div>
-                </li>
-                -->
-              <%# else %>
-                <!--li class="nav-item"-->
-                  <%#= link_to "Login", new_user_session_path, class: "nav-link" %>
-                <!--/li-->
-              <%# end %>
             </ul>
           </div>
         </div>
       </div>
     </header>
+
     <%= yield %>
 
     <div class="footer navbar fixed-bottom">
@@ -77,7 +53,5 @@
         <a href="#"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
-
-
   </body>
 </html>
